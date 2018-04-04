@@ -1,0 +1,1 @@
+[] execVM "Custom\cfggen.sqf";
