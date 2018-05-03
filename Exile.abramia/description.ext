@@ -2,6 +2,9 @@
 #define false 0
 // Required for the XM8, do not remove!
 #include "RscDefines.hpp"
+#include "R3F_LOG\desc_include.h"
+#include "ExAdClient\ExAd.cpp"
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
@@ -19,7 +22,7 @@ class Header
 {
     gameType = Survive; // Do NOT change this
     minPlayers = 1;
-    maxPlayers = 100;
+    maxPlayers = 70;
 };
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -70,9 +73,12 @@ showHUD[] =
 };
 
 #include "config.cpp"
- 	#include "CfgRemoteExec.hpp"
-	#include "infiSTAR_defines.hpp"
-	#include "infiSTAR_AdminMenu.hpp"
-	#include "infiSTAR_chat.hpp"
-	#include "infiSTAR_KeyBinds.hpp"
+
+
+
+	class CfgFunctions
+{
+	#include "ExAdClient\CfgFunctions.cpp"
+};
+
 
