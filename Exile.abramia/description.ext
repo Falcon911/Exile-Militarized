@@ -3,7 +3,8 @@
 // Required for the XM8, do not remove!
 #include "RscDefines.hpp"
 #include "R3F_LOG\desc_include.h"
-#include "ExAdClient\ExAd.cpp"
+#include "MostWanted_Client\Dialog\MostWantedDefines.hpp"
+#include "MostWanted_Client\Dialog\MostWantedDialog.hpp"
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -73,12 +74,8 @@ showHUD[] =
 };
 
 #include "config.cpp"
-
-
-
-	class CfgFunctions
-{
-	#include "ExAdClient\CfgFunctions.cpp"
-};
-
-
+ 	#include "CfgRemoteExec.hpp"
+	#include "infiSTAR_defines.hpp"
+	#include "infiSTAR_AdminMenu.hpp"
+	#include "infiSTAR_chat.hpp"
+	#include "infiSTAR_KeyBinds.hpp"

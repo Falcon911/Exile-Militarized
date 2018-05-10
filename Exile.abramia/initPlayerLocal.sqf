@@ -2,7 +2,10 @@
  * Created with Exile Mod 3DEN Plugin
  * www.exilemod.com
  */
-
+// Ducks of war mod
+DOW_FN_ClaimTrophy = compileFinal preprocessFileLineNumbers "addons\dow_claimtrophy.sqf";
+[] execVM "MostWanted_Client\MostWanted_Init.sqf";
+ 
 if (!hasInterface || isServer) exitWith {};
 
 // 98 NPCs

@@ -31,6 +31,10 @@ if !(isNull _killingPlayer) then
 	_oldKillerRespect = _killingPlayer getVariable ["ExileScore", 0];
 };
 _newKillerRespect = _oldKillerRespect;
+
+// Ducks of war mod
+_victim setVariable["DOWGV_killer", name _killingPlayer, 0];
+_victim setVariable["DOWGV_killType", _killType, 0];
 switch (_killType) do 
 {
 	default 
@@ -45,6 +49,9 @@ switch (_killType) do
 			"%1 died because %1 was very unlucky.",
 			"%1 died due to Arma bugs and is probably very salty right now.",
 			"%1 died an awkward death.",
+			"%1 died becuase Mr. Boom Boom got him",
+			"%1 died becuase Death keeps no calendar",
+			"%1 died because Death pays all debts",
 			"%1 died. Yes, %1 is dead. Like really dead-dead."
 		];
 		_countDeath = true;
@@ -141,6 +148,26 @@ if !(isNull _killingPlayer) then
 	_killerStatsNeedUpdate = false;
 	if (_countKill) then
 	{
+	  // Most-Wanted
+
+        _bounty = _victim getVariable ["ExileBounty",[]];
+        diag_log format["Victim's bounty: %1",_bounty];
+        if (count(_bounty) > 0) then
+        {
+            _contract = _killer getVariable ["ExileBountyContract",[]];
+            _friends = _killer getVariable ["ExileBountyFriends",[]];
+            diag_log format["Killer's bounty contract:%1",_contract];
+            if !(_contract in _friends) then
+            {
+                if ((_contract select 1) isEqualTo (getPlayerUID _victim)) then
+                {
+                    diag_log "Killer has a contract";
+                    [_victim,_killer] call ExileServer_MostWanted_bounty_targetKilled;
+                };
+            };
+        };
+
+        // Most-Wanted				  
 		_newKillerFrags = _killingPlayer getVariable ["ExileKills", 0];
 		_newKillerFrags = _newKillerFrags + 1;
 		_killerStatsNeedUpdate = true;

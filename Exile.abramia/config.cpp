@@ -8,7 +8,17 @@
  * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
- 
+ //most wanted
+#include "MostWanted_Client\CfgMostWanted.cpp"
+class CfgHints
+ {
+     #include "MostWanted_Client\Notifications.hpp"
+ };
+
+ class CfgNetworkMessages
+ {
+     #include "MostWanted_Client\NetworkMessages.hpp"
+ };
 
 class CfgClans
 {
@@ -1756,12 +1766,12 @@ class CfgExileArsenal
 	///////////////////////////////////////////////////////////////////////////////
 	// Trash Items
 	///////////////////////////////////////////////////////////////////////////////
-	class Exile_Item_Magazine01 						{ quality = 1; price = 800; };
-	class Exile_Item_Magazine02 						{ quality = 1; price = 800; };
-	class Exile_Item_Magazine03 						{ quality = 1; price = 800; };
-	class Exile_Item_Magazine04 						{ quality = 1; price = 800; };
-	class Exile_Item_ToiletPaper						{ quality = 1; price = 1000; };
-	class Exile_Item_RubberDuck							{ quality = 6; price = 50000; };
+	class Exile_Item_Magazine01 						{ quality = 1; price = 500; };
+	class Exile_Item_Magazine02 						{ quality = 1; price = 500; };
+	class Exile_Item_Magazine03 						{ quality = 1; price = 500; };
+	class Exile_Item_Magazine04 						{ quality = 1; price = 500; };
+	class Exile_Item_ToiletPaper						{ quality = 1; price = 600; };
+	class Exile_item_RubberDuck               			{ quality = 1; price = 90000; sellPrice = 90000;};
 	class Exile_Item_Knife								{ quality = 6; price = 60000; };
 	
 ///uniforms
@@ -1770,6 +1780,7 @@ class sfp_m90w_uniform      { quality = 2; price = 120; };
 class sfp_m90w_uniform_folded      { quality = 2; price = 120; };
 class sfp_m59w_uniform      { quality = 2; price = 120; };
 class sfp_m90d_uniform_folded      { quality = 2; price = 120; };
+class sfp_m87_flying_suit     { quality = 2; price = 120; };
 class U_C_Poloshirt_blue      { quality = 1; price = 30; };
 class U_C_Poloshirt_burgundy      { quality = 1; price = 30; };
 class U_C_Poloshirt_salmon      { quality = 1; price = 30; };
@@ -2242,6 +2253,7 @@ class sfp_m59w_cap      { quality = 4; price = 404; };
 class sfp_m90w_cap      { quality = 4; price = 404; };
 class sfp_bashatt90      { quality = 4; price = 404; };
 class sfp_m90w_helmet_peltor_nvg      { quality = 4; price = 1604; };
+class sfp_flighthelmet116     { quality = 4; price = 404; };
 class rhs_6b27m_digi      { quality = 3; price = 1196; };
 class rhs_6b27m_digi_ess      { quality = 3; price = 1196; };
 class rhs_6b27m_digi_bala      { quality = 3; price = 1196; };
@@ -2551,12 +2563,15 @@ class rhsusf_acc_rotex_mp7      { quality = 2; price = 390; };
 class rhsusf_acc_rotex_mp7_desert      { quality = 2; price = 390; };
 class rhsusf_acc_rotex_mp7_winter      { quality = 2; price = 390; };
 class rhsusf_acc_rotex_mp7_aor1      { quality = 2; price = 390; };
+class VME_M99_Suppressor_Fix      { quality = 2; price = 690; };
+class rhsusf_acc_T1_high 		{ quality = 2; price = 390; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// UAVS
 	///////////////////////////////////////////////////////////////////////////////
-	class I_UavTerminal								{ quality = 4; price = 750; };
-	class I_UAV_01_backpack_F						{ quality = 4; price = 3000; };
+	class I_UavTerminal								{ quality = 5; price = 7500; };
+	class I_UAV_01_backpack_F						{ quality = 5; price = 15000; };
+	class I_UAV_06_backpack_F						{ quality = 6; price = 30000; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Static MGs
@@ -2638,7 +2653,7 @@ class rhsusf_acc_eotech_552      { quality = 1; price = 692; };
 class rhsusf_acc_premier      { quality = 1; price = 692; };
 class rhsusf_acc_premier_anpvs27      { quality = 1; price = 692; };
 class rhsusf_acc_premier_low      { quality = 1; price = 692; };
-
+class RHS_optic_maaws      { quality = 1; price = 692; };
 	
 	// Added in 1.0.3, but not used
 	//class Exile_Item_SprayCan_Black				{ quality = 2; price = 20; };
@@ -2696,8 +2711,8 @@ class Exile_Item_SnakeFilet_Raw      { quality = 1; price = 35; };
 	// First Aid
 	///////////////////////////////////////////////////////////////////////////////
 class Exile_Item_InstaDoc      { quality = 3; price = 715; };
-class Exile_Item_Vishpirin      { quality = 2; price = 440; };
-class Exile_Item_Bandage      { quality = 1; price = 215; };
+class Exile_Item_Vishpirin      { quality = 2; price = 240; };
+class Exile_Item_Bandage      { quality = 1; price = 115; };
 class Exile_Item_Defibrillator      { quality = 1; price = 3030; };
 class Exile_Item_Heatpack      { quality = 1; price = 1230; };
 
@@ -2719,44 +2734,45 @@ class Exile_Item_WoodSupportKit      { quality = 1; price = 140; };
 class Exile_Item_WoodWallKit      { quality = 1; price = 140; };
 class Exile_Item_WoodWallHalfKit      { quality = 1; price = 170; };
 class Exile_Item_WoodWindowKit      { quality = 1; price = 140; };
-class Exile_Item_PortableGeneratorKit      { quality = 1; price = 190; };
+class Exile_Item_PortableGeneratorKit      { quality = 2; price = 1000; };
 class Exile_Item_CarWheel      { quality = 1; price = 100; };
 class Exile_Item_Cement      { quality = 1; price = 100; };
 class Exile_Item_CookingPot      { quality = 1; price = 180; };
-class Exile_Item_DuctTape      { quality = 1; price = 195; };
+class Exile_Item_DuctTape      { quality = 1; price = 250; };
 class Exile_Item_ExtensionCord      { quality = 1; price = 195; };
-class Exile_Item_FuelCanisterEmpty      { quality = 1; price = 198; };
+class Exile_Item_FuelCanisterEmpty      { quality = 1; price = 100; };
 class Exile_Item_JunkMetal      { quality = 1; price = 175; };
 class Exile_Item_LightBulb      { quality = 1; price = 195; };
 class Exile_Item_Matches      { quality = 1; price = 199; };
-class Exile_Item_MetalBoard      { quality = 1; price = 150; };
+class Exile_Item_MetalBoard      { quality = 1; price = 350; };
 class Exile_Item_MetalHedgehogKit      { quality = 1; price = 150; };
-class Exile_Item_MetalPole      { quality = 1; price = 175; };
-class Exile_Item_MetalScrews      { quality = 1; price = 190; };
+class Exile_Item_MetalPole      { quality = 1; price = 350; };
+class Exile_Item_MetalScrews      { quality = 1; price = 300; };
 class Exile_Item_MetalWire      { quality = 1; price = 195; };
 class Exile_Item_Rope      { quality = 1; price = 190; };
 class Exile_Item_Sand      { quality = 1; price = 100; };
 class Exile_Item_ZipTie      { quality = 1; price = 195; };
 class Exile_Item_SleepingMat      { quality = 1; price = 170; };
-class Exile_Melee_Axe      { quality = 1; price = 965; };
-class Exile_Item_CanOpener      { quality = 1; price = 995; };
-class Exile_Item_Handsaw      { quality = 1; price = 980; };
-class Exile_Item_Pliers      { quality = 1; price = 990; };
-class Exile_Item_Grinder      { quality = 1; price = 970; };
-class Exile_Item_Foolbox      { quality = 1; price = 950; };
+class Exile_Melee_Axe      { quality = 1; price = 1000; };
+class Exile_Item_CanOpener      { quality = 1; price = 1000; };
+class Exile_Item_Handsaw      { quality = 1; price = 1000; };
+class Exile_Item_Pliers      { quality = 2; price = 2000; };
+class Exile_Item_Grinder      { quality = 1; price = 1500; };
+class Exile_Item_Foolbox      { quality = 1; price = 2500; };
 class Exile_Item_CordlessScrewdriver      { quality = 1; price = 970; };
 class Exile_Item_FireExtinguisher      { quality = 1; price = 970; };
 class Exile_Item_Hammer      { quality = 1; price = 990; };
 class Exile_Item_OilCanister      { quality = 1; price = 970; };
 class Exile_Item_Screwdriver      { quality = 1; price = 990; };
-class Exile_Item_Shovel      { quality = 1; price = 970; };
+class Exile_Item_Shovel      { quality = 1; price = 1000; };
 class Exile_Item_Wrench      { quality = 1; price = 990; };
-class Exile_Item_Laptop      { quality = 4; price = 39970; };
-class Exile_Item_BaseCameraKit      { quality = 4; price = 39975; };
-class Exile_Item_ThermalScannerPro      { quality = 4; price = 60000; };
-class Exile_Item_SafeKit      { quality = 3; price = 59800; };
-class Exile_Item_CodeLock      { quality = 2; price = 19995; };
-class Exile_Item_FortificationUpgrade      { quality = 2; price = 19900; };
+class Exile_Item_Laptop      { quality = 4; price = 10000; };
+class Exile_Item_BaseCameraKit      { quality = 4; price = 5000; };
+class Exile_Item_ThermalScannerPro      { quality = 6; price = 60000; };
+class Exile_Item_SafeKit      { quality = 3; price = 60000; };
+class Exile_Container_Safe_Small	{ quality = 2; price = 40000; };
+class Exile_Item_CodeLock      { quality = 2; price = 15000; };
+class Exile_Item_FortificationUpgrade      { quality = 2; price = 5000; };
 
 
 
@@ -2979,14 +2995,14 @@ class 3Rnd_SmokeRed_Grenade_shell      { quality = 1; price = 13; };
 class 3Rnd_SmokeYellow_Grenade_shell      { quality = 1; price = 13; };
 class rhsusf_mag_7x45acp_MHP      { quality = 1; price = 47; };
 class sfp_30rnd_556x45_stanag_plastic      { quality = 1; price = 46; };
-class sfp_50rd_762x51_ksp58      { quality = 2; price = 133; };
-class sfp_100rd_762x51_ksp58      { quality = 2; price = 133; };
-class sfp_249rd_762x51_ksp58      { quality = 2; price = 133; };
-class sfp_200rd_556x45_ksp90      { quality = 2; price = 133; };
+class sfp_100Rnd_762x51_ksp58      { quality = 2; price = 99; };
+class sfp_249Rnd_762x51_ksp58      { quality = 2; price = 199; };
+class sfp_200rnd_556x45_ksp90      { quality = 2; price = 133; };
 class sfp_9rnd_762x51_psg90      { quality = 2; price = 133; };
 class sfp_9rnd_762x51_psg90_prick      { quality = 2; price = 133; };
 class sfp_9rnd_762x51_psg90_tracer      { quality = 2; price = 133; };
 class sfp_20rnd_762_51_ak4      { quality = 2; price = 133; };
+class sfp_36Rnd_9mm_kpistm45			{ quality = 1; price = 50; };
 class rhs_mag_9x18_12_57N181S      { quality = 1; price = 50; };
 class rhs_mag_9x19_17      { quality = 1; price = 50; };
 class rhs_mag_30Rnd_556x45_Mk318_Stanag      { quality = 1; price = 70; };
@@ -3048,6 +3064,7 @@ class rhsusf_5Rnd_00Buck      { quality = 1; price = 46; };
 class rhsusf_5Rnd_Slug      { quality = 1; price = 46; };
 class rhsgref_5Rnd_762x54_m38      { quality = 1; price = 46; };
 class rhs_mag_9x19mm_7n21_20      { quality = 1; price = 46; };
+class M99_5Rnd_mag     { quality = 2; price = 246; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Explosives-launcher-rockets
@@ -3112,9 +3129,11 @@ class sfp_rbs56_support_bag      { quality = 3; price = 1100; };
 class sfp_rbs56_weapon_bag      { quality = 3; price = 11900; };
 class sfp_rbs70_support_bag      { quality = 3; price = 1100; };
 class sfp_rbs70_weapon_bag      { quality = 3; price = 20900; };
-class sfp_grkm41_support_bag      { quality = 3; price = 1100; };
-class sfp_grkm41_weapon_bag      { quality = 3; price = 14900; };
-class rhssaf_mine_mrud_c_mag      { quality = 3; price = 14900; };
+class sfp_grkm84_support_bag      { quality = 3; price = 1100; };
+class sfp_grkm84_weapon_bag      { quality = 3; price = 14900; };
+class rhs_weap_fgm148			{ quality = 4; price = 25000;};
+class rhs_fgm148_magazine_AT		{ quality = 4; price = 5000;};
+class rhssaf_mine_mrud_c_mag      { quality = 3; price = 2000; };
 class sfp_suicidebelt      { quality = 3; price = 53900; };
 
 	///////////////////////////////////////////////////////////////////////////////
@@ -3353,7 +3372,7 @@ class rhs_weap_XM2010      { quality = 1; price = 2659; };
 class rhs_weap_XM2010_d      { quality = 1; price = 2659; };
 class rhs_weap_XM2010_sa      { quality = 1; price = 2659; };
 class rhs_weap_XM2010_wd      { quality = 1; price = 2659; };
-class rhs_weap_M107_w      { quality = 2; price = 3459; };
+class rhs_weap_M107_w      { quality = 3; price = 4459; };
 class rhs_weap_svdp      { quality = 1; price = 2659; };
 class rhs_weap_svdp_npz      { quality = 1; price = 2659; };
 class rhs_weap_svdp_wd      { quality = 1; price = 2659; };
@@ -3361,6 +3380,7 @@ class rhs_weap_svdp_wd_npz      { quality = 1; price = 2659; };
 class rhs_weap_svds      { quality = 1; price = 2659; };
 class rhs_weap_svds_npz      { quality = 1; price = 2659; };
 class rhs_weap_t5000      { quality = 1; price = 2659; };
+class VME_M99_Fix      { quality = 3; price = 4459; };
 
 
 	
@@ -3426,18 +3446,14 @@ class RHS_A10      { quality = 6; price = 120560; };
 class RHS_A10_CBU      { quality = 6; price = 120560; };
 class RHS_A10_AT      { quality = 6; price = 120560; };
 class rhsusf_f22      { quality = 5; price = 100560; };
-class FIR_F15C_Standard      { quality = 6; price = 120600; };
-class FIR_F15D      { quality = 6; price = 120600; };
-class FIR_F15DJ      { quality = 6; price = 120600; };
-class FIR_F15E      { quality = 6; price = 120600; };
+class FIR_F15E_SJ_336      { quality = 6; price = 120600; };
 class FIR_F15K      { quality = 6; price = 120600; };
-class FIR_F16C_Standard      { quality = 6; price = 120600; };
+class FIR_F16C_WW      { quality = 6; price = 120600; };
+class FIR_F16C      { quality = 6; price = 120600; };
 class FIR_F16D      { quality = 6; price = 120600; };
-class FIR_F14A      { quality = 6; price = 120600; };
-class FIR_F14B      { quality = 6; price = 120600; };
-class FIR_F14D      { quality = 6; price = 120600; };
 class JS_JC_FA18E      { quality = 6; price = 180620; };
 class JS_JC_FA18F      { quality = 6; price = 180620; };
+//class FIR_AV8B_Standard      { quality = 6; price = 120555; };<<AMS issue??
 class RHS_Su25SM_vvsc      { quality = 5; price = 150560; };
 class RHS_Su25SM_KH29_vvsc      { quality = 5; price = 150560; };
 class RHS_Su25SM_CAS_vvsc      { quality = 5; price = 150560; };
@@ -3447,7 +3463,6 @@ class rhs_l159_CDF_plamen      { quality = 2; price = 60555; };
 class rhs_l159_CDF_CAP      { quality = 2; price = 60555; };
 class rhs_l159_CDF_CAS      { quality = 2; price = 60555; };
 class rhs_l39_cdf      { quality = 2; price = 40555; };
-class FIR_AV8B_Standard      { quality = 6; price = 120560; };
 class RHS_T50_vvs_052      { quality = 5; price = 100555; };
 /////////////////////////////////////
 /////////////  Helicopters
@@ -3476,30 +3491,29 @@ class I_Heli_light_03_F      { quality = 4; price = 50040; };
 class B_Heli_Attack_01_F      { quality = 5; price = 90040; };
 class O_Heli_Light_02_F      { quality = 4; price = 51040; };
 class sfp_hkp9_rb55      { quality = 3; price = 18020; };
-class sfp_hkp4_asw      { quality = 4; price = 27020; };
 class RHS_MELB_AH6M_H      { quality = 3; price = 55035; };
 class RHS_MELB_AH6M_L      { quality = 3; price = 37035; };
 class RHS_MELB_AH6M_M      { quality = 3; price = 46035; };
 class RHS_MELB_AH6M      { quality = 3; price = 28035; };
-class RHS_CH_47F      { quality = 4; price = 53045; };
-class RHS_CH_47F_light      { quality = 2; price = 23030; };
-class RHS_AH1Z      { quality = 4; price = 24050; };
-class RHS_AH1Z_CS      { quality = 4; price = 24050; };
-class RHS_AH1Z_GS      { quality = 4; price = 24050; };
-class RHS_UH60M      { quality = 2; price = 15040; };
-class RHS_UH60M_d      { quality = 2; price = 15040; };
-class RHS_AH64D_noradar      { quality = 4; price = 44050; };
-class RHS_AH64D_noradar_GS      { quality = 4; price = 44050; };
-class RHS_AH64D_noradar_CS      { quality = 4; price = 44050; };
-class RHS_AH64D_noradar_AA      { quality = 4; price = 44050; };
-class RHS_AH64D      { quality = 4; price = 44050; };
-class RHS_AH64D_GS      { quality = 4; price = 44050; };
-class RHS_AH64D_CS      { quality = 4; price = 44050; };
-class RHS_AH64D_AA      { quality = 4; price = 44050; };
-class RHS_AH64DGrey      { quality = 4; price = 44050; };
-class RHS_UH1Y      { quality = 3; price = 20040; };
-class RHS_UH1Y_FFAR      { quality = 3; price = 20040; };
-class RHS_UH1Y_d_GS      { quality = 3; price = 20040; };
+class RHS_CH_47F      { quality = 4; price = 43045; };
+class RHS_CH_47F_light      { quality = 4; price = 43030; };
+class RHS_AH1Z      { quality = 4; price = 74050; };
+class RHS_AH1Z_CS      { quality = 4; price = 74050; };
+class RHS_AH1Z_GS      { quality = 4; price = 74050; };
+class RHS_UH60M      { quality = 2; price = 35040; };
+class RHS_UH60M_d      { quality = 2; price = 35040; };
+class RHS_AH64D_noradar      { quality = 4; price = 80000; };
+class RHS_AH64D_noradar_GS      { quality = 4; price = 80000; };
+class RHS_AH64D_noradar_CS      { quality = 4; price = 80000; };
+class RHS_AH64D_noradar_AA      { quality = 4; price = 80000; };
+class RHS_AH64D      { quality = 4; price = 90000; };
+class RHS_AH64D_GS      { quality = 4; price = 90000; };
+class RHS_AH64D_CS      { quality = 4; price = 90000; };
+class RHS_AH64D_AA      { quality = 4; price = 90000; };
+class RHS_AH64DGrey      { quality = 4; price = 90000; };
+class RHS_UH1Y      { quality = 3; price = 50040; };
+class RHS_UH1Y_FFAR      { quality = 3; price = 50040; };
+class RHS_UH1Y_d_GS      { quality = 3; price = 50040; };
 class RHS_Mi8mt_vdv      { quality = 2; price = 21525; };
 class RHS_Mi8MTV3_vdv      { quality = 3; price = 39525; };
 class RHS_Mi8MTV3_UPK23_vdv      { quality = 3; price = 48525; };
@@ -3507,13 +3521,13 @@ class RHS_Mi8MTV3_FAB_vdv      { quality = 3; price = 39525; };
 class RHS_Mi8MTV3_heavy_vdv      { quality = 3; price = 48525; };
 class RHS_Ka52_UPK23_vvsc      { quality = 5; price = 77055; };
 class RHS_Ka52_vvsc      { quality = 5; price = 77055; };
-class RHS_Mi24V_vvsc      { quality = 3; price = 29045; };
-class RHS_Mi24V_FAB_vvsc      { quality = 3; price = 29045; };
-class RHS_Mi24V_UPK23_vvsc      { quality = 3; price = 29045; };
-class RHS_Mi24V_AT_vvsc      { quality = 3; price = 29045; };
-class RHS_Mi24P_CAS_vvsc      { quality = 3; price = 29045; };
-class rhs_mi28n_vvsc      { quality = 4; price = 50045; };
-class rhs_mi28n_s13_vvsc      { quality = 4; price = 50045; };
+class RHS_Mi24V_vvsc      { quality = 3; price = 65000; };
+class RHS_Mi24V_FAB_vvsc      { quality = 3; price = 65000; };
+class RHS_Mi24V_UPK23_vvsc      { quality = 3; price = 65000; };
+class RHS_Mi24V_AT_vvsc      { quality = 3; price = 65000; };
+class RHS_Mi24P_CAS_vvsc      { quality = 3; price = 65000; };
+class rhs_mi28n_vvsc      { quality = 4; price = 70045; };
+class rhs_mi28n_s13_vvsc      { quality = 4; price = 70045; };
 
 
 	//////Vehicles
@@ -3571,7 +3585,7 @@ class Exile_Car_QilinUnarmed      { quality = 1; price = 5875; };
 class Exile_Car_MB4WD      { quality = 1; price = 5030; };
 class Exile_Car_MB4WDOpen      { quality = 1; price = 5030; };
 class Exile_Car_HMMWV_M2_Green      { quality = 2; price = 5265; };
-class Exile_Car_HMMWV_M134_Green      { quality = 5; price = 11565; };
+class Exile_Car_HMMWV_M134_Green      { quality = 5; price = 21565; };
 class Exile_Car_Van_Black      { quality = 1; price = 7680; };
 class Exile_Car_Van_Box_Black      { quality = 1; price = 8680; };
 class Exile_Car_Van_Fuel_Black      { quality = 1; price = 5180; };
@@ -3601,47 +3615,47 @@ class RHS_Ural_MSV_01      { quality = 1; price = 7052; };
 class RHS_Ural_Flat_MSV_01      { quality = 1; price = 7052; };
 class RHS_Ural_Open_MSV_01      { quality = 1; price = 7052; };
 class RHS_Ural_Open_Flat_MSV_01      { quality = 1; price = 7052; };
-class RHS_Ural_Fuel_MSV_01      { quality = 1; price = 7052; };
-class RHS_Ural_Repair_MSV_01      { quality = 1; price = 7052; };
-class Exile_Car_Strider      { quality = 2; price = 82050; };
-class Exile_Car_Hunter      { quality = 1; price = 42400; };
-class Exile_Car_Ifrit      { quality = 2; price = 81950; };
-class rhs_tigr_3camo_msv      { quality = 1; price = 42060; };
-class rhs_tigr_ffv_3camo_msv      { quality = 1; price = 42060; };
-class rhs_tigr_ffv_msv      { quality = 1; price = 42060; };
-class rhs_tigr_m_3camo_msv      { quality = 1; price = 42060; };
-class rhs_tigr_m_msv      { quality = 1; price = 42060; };
-class rhs_tigr_msv      { quality = 1; price = 42060; };
-class rhs_tigr_sts_3camo_msv      { quality = 1; price = 42060; };
-class rhs_tigr_sts_msv      { quality = 2; price = 82060; };
+class RHS_Ural_Fuel_MSV_01      { quality = 4; price = 37052; };
+class RHS_Ural_Repair_MSV_01      { quality = 4; price = 37052; };
+class Exile_Car_Strider      { quality = 2; price = 62050; };
+class Exile_Car_Hunter      { quality = 2; price = 42400; };
+class Exile_Car_Ifrit      { quality = 2; price = 41950; };
+class rhs_tigr_3camo_msv      { quality = 1; price = 22060; };
+class rhs_tigr_ffv_3camo_msv      { quality = 1; price = 22060; };
+class rhs_tigr_ffv_msv      { quality = 1; price = 22060; };
+class rhs_tigr_m_3camo_msv      { quality = 1; price = 22060; };
+class rhs_tigr_m_msv      { quality = 1; price = 22060; };
+class rhs_tigr_msv      { quality = 1; price = 22060; };
+class rhs_tigr_sts_3camo_msv      { quality = 2; price = 42060; };
+class rhs_tigr_sts_msv      { quality = 2; price = 42060; };
 class rhsusf_rg33_wd      { quality = 1; price = 42052; };
 class rhsusf_rg33_usmc_wd      { quality = 1; price = 42052; };
 class rhsusf_rg33_m2_wd      { quality = 1; price = 42052; };
 class rhsusf_rg33_m2_usmc_wd      { quality = 1; price = 42052; };
-class rhsusf_M1220_usarmy_wd      { quality = 2; price = 83200; };
-class rhsusf_M1220_M2_usarmy_wd      { quality = 3; price = 123200; };
-class rhsusf_M1220_MK19_usarmy_wd      { quality = 4; price = 163200; };
-class rhsusf_M1230_M2_usarmy_wd      { quality = 4; price = 163200; };
-class rhsusf_M1230_MK19_usarmy_wd      { quality = 4; price = 163200; };
-class rhsusf_M1220_M153_M2_usarmy_wd      { quality = 4; price = 163200; };
-class rhsusf_M1230a1_usarmy_wd      { quality = 3; price = 123200; };
+class rhsusf_M1220_usarmy_wd      { quality = 2; price = 53200; };
+class rhsusf_M1220_M2_usarmy_wd      { quality = 3; price = 63200; };
+class rhsusf_M1220_MK19_usarmy_wd      { quality = 4; price = 69200; };
+class rhsusf_M1230_M2_usarmy_wd      { quality = 4; price = 63200; };
+class rhsusf_M1230_MK19_usarmy_wd      { quality = 4; price = 69200; };
+class rhsusf_M1220_M153_M2_usarmy_wd      { quality = 4; price = 63200; };
+class rhsusf_M1230a1_usarmy_wd      { quality = 3; price = 73200; };
 class rhsusf_M1232_usarmy_wd      { quality = 1; price = 43200; };
-class rhsusf_M1232_M2_usarmy_wd      { quality = 3; price = 123200; };
-class rhsusf_M1232_MK19_usarmy_wd      { quality = 4; price = 163200; };
-class rhsusf_M1237_M2_usarmy_wd      { quality = 3; price = 123200; };
-class rhsusf_M1237_MK19_usarmy_wd      { quality = 3; price = 123200; };
-class rhsusf_M1084A1R_SOV_M2_WD_fmtv_socom      { quality = 2; price = 83200; };
-class rhsusf_M1078A1R_SOV_M2_WD_fmtv_socom      { quality = 2; price = 83150; };
-class rhsusf_M1117_W      { quality = 2; price = 83150; };
-class rhsusf_M1117_O      { quality = 2; price = 83150; };
+class rhsusf_M1232_M2_usarmy_wd      { quality = 3; price = 63200; };
+class rhsusf_M1232_MK19_usarmy_wd      { quality = 4; price = 69200; };
+class rhsusf_M1237_M2_usarmy_wd      { quality = 3; price = 63200; };
+class rhsusf_M1237_MK19_usarmy_wd      { quality = 3; price = 69200; };
+class rhsusf_M1084A1R_SOV_M2_WD_fmtv_socom      { quality = 2; price = 33200; };
+class rhsusf_M1078A1R_SOV_M2_WD_fmtv_socom      { quality = 2; price = 33150; };
+class rhsusf_M1117_W      { quality = 2; price = 43150; };
+class rhsusf_M1117_O      { quality = 2; price = 43150; };
 class sfp_ikv91      { quality = 5; price = 153400; };
 class sfp_strf90c      { quality = 3; price = 93250; };
 class sfp_lvkv90c_snow      { quality = 3; price = 93250; };
 class sfp_strv103c      { quality = 5; price = 153500; };
 class sfp_grkpbv90120      { quality = 5; price = 153500; };
-class sfp_strv121      { quality = 6; price = 183700; };
-class sfp_strv122      { quality = 5; price = 153500; };
-class sfp_patgb203      { quality = 1; price = 32030; };
+class sfp_strv121      { quality = 5; price = 143700; };
+class sfp_strv122      { quality = 6; price = 153500; };
+class sfp_patgb203      { quality = 2; price = 54030; };
 class sfp_centurion      { quality = 5; price = 153500; };
 class rhsusf_m1a1aimwd_usarmy      { quality = 5; price = 253600; };
 class rhsusf_m1a1aim_tuski_wd      { quality = 5; price = 253600; };
@@ -3651,11 +3665,11 @@ class rhsusf_m1a1hc_wd      { quality = 5; price = 253600; };
 class rhsusf_m1a2sep1wd_usarmy      { quality = 5; price = 253600; };
 class rhsusf_m1a2sep1tuskiwd_usarmy      { quality = 5; price = 253600; };
 class rhsusf_m1a2sep1tuskiiwd_usarmy      { quality = 5; price = 253600; };
-class rhsusf_m113_usarmy_M240      { quality = 2; price = 63200; };
-class rhsusf_m113_usarmy_M2_90      { quality = 2; price = 63200; };
-class rhsusf_m113_usarmy_MK19      { quality = 4; price = 123200; };
-class rhsusf_m113_usarmy_MK19_90      { quality = 4; price = 123200; };
-class rhsusf_m113_usarmy_unarmed      { quality = 1; price = 33200; };
+class rhsusf_m113_usarmy_M240      { quality = 2; price = 21200; };
+class rhsusf_m113_usarmy_M2_90      { quality = 2; price = 23200; };
+class rhsusf_m113_usarmy_MK19      { quality = 4; price = 25200; };
+class rhsusf_m113_usarmy_MK19_90      { quality = 4; price = 25200; };
+class rhsusf_m113_usarmy_unarmed      { quality = 1; price = 20200; };
 class RHS_M2A2_wd      { quality = 4; price = 123290; };
 class RHS_M2A3_wd      { quality = 4; price = 123290; };
 class RHS_M2A2_BUSKI_wd      { quality = 5; price = 153290; };
@@ -3678,13 +3692,13 @@ class rhs_t80um      { quality = 6; price = 303600; };
 class rhs_t80u45m      { quality = 6; price = 303600; };
 class rhs_t90_tv      { quality = 5; price = 253550; };
 class rhs_t90a_tv      { quality = 5; price = 253550; };
-class rhsgref_BRDM2      { quality = 2; price = 63120; };
-class rhsgref_BRDM2_ATGM      { quality = 2; price = 63120; };
-class rhsgref_BRDM2UM      { quality = 2; price = 63120; };
-class rhsgref_BRDM2_HQ      { quality = 2; price = 63120; };
-class rhs_btr60_msv      { quality = 2; price = 63100; };
-class RHS_BTR70_MSV      { quality = 2; price = 63100; };
-class rhs_btr80_msv      { quality = 1; price = 33100; };
+class rhsgref_BRDM2      { quality = 2; price = 33120; };
+class rhsgref_BRDM2_ATGM      { quality = 2; price = 35120; };
+class rhsgref_BRDM2UM      { quality = 2; price = 23120; };
+class rhsgref_BRDM2_HQ      { quality = 2; price = 25120; };
+class rhs_btr60_msv      { quality = 2; price = 53100; };
+class RHS_BTR70_MSV      { quality = 2; price = 58100; };
+class rhs_btr80_msv      { quality = 2; price = 63100; };
 class rhs_btr80a_msv      { quality = 2; price = 63100; };
 class rhs_bmd1      { quality = 2; price = 63260; };
 class rhs_bmd1k      { quality = 2; price = 63260; };
@@ -3711,17 +3725,23 @@ class rhs_bmp3m_msv      { quality = 2; price = 63200; };
 class rhs_bmp3mera_msv      { quality = 2; price = 63200; };
 class rhs_Ob_681_2      { quality = 4; price = 123260; };
 class rhs_sprut_vdv      { quality = 4; price = 123200; };
+class VME_PLA_ZBL09			{ quality = 3; price = 65000; };
+class VME_PLA_ZTL11			{ quality = 4; price = 79000; };
 class RHS_BM21_MSV_01      { quality = 5; price = 223052; };
-class rhsusf_m109_usarmy      { quality = 5; price = 223200; };
 class rhs_2s3_tv      { quality = 5; price = 223300; };
 class POOK_K300P_OPFOR      { quality = 5; price = 223400; };
 class POOK_9K58_OPFOR      { quality = 6; price = 267400; };
 class pook_A222_OPFOR      { quality = 3; price = 135080; };
 class pook_2S1_BLUFOR      { quality = 4; price = 179400; };
-class RHS_Ural_Zu23_MSV_01      { quality = 3; price = 129052; };
-class rhs_gaz66_zu23_msv      { quality = 3; price = 129050; };
-class rhs_zsu234_aa      { quality = 3; price = 129050; };
-class RHS_M6_wd      { quality = 4; price = 171200; };
+class RHS_Ural_Zu23_MSV_01      { quality = 3; price = 69052; };
+class rhs_gaz66_zu23_msv      { quality = 3; price = 69050; };
+class rhs_zsu234_aa      { quality = 4; price = 100000; };
+class RHS_M6_wd      { quality = 4; price = 125000; };
+class O_APC_Tracked_02_AA_F      { quality = 3; price = 129500; };
+class VME_PLA_hq7				{ quality = 3; price = 95000; };
+class VME_PLA_HQ61				{ quality = 4; price = 100000; };
+class VME_PLA_HQ64				{ quality = 4; price = 125000; };
+class VME_PLA_PGZ07				{ quality = 5; price = 150000; };
 ///////////////////////////
 //////          Boats
 ////////////////////////////////
@@ -3754,8 +3774,19 @@ class  HAFM_Virginia      { quality = 6; price = 130150; };
 //class  HAFM_Yasen      { quality = 6; price = 130150; };
 //class  HAFM_214      { quality = 6; price = 130150; };
 //class  HAFM_209      { quality = 6; price = 130150; };
+class vme_ZUBR_PLA		{ quality = 4; price = 90750; };
 
-
+///////////////////////////
+//////          Trucks
+////////////////////////////////
+class Exile_Car_Ural_Covered_Military      { quality = 1; price = 6500; };
+class Exile_Car_Ural_Covered_Worker      { quality = 1; price = 6500; };
+class Exile_Car_Ural_Covered_Yellow      { quality = 1; price = 6500; };
+class Exile_Car_Ural_Covered_Blue      { quality = 1; price = 6500; };
+class Exile_Car_Ural_Open_Military      { quality = 1; price = 6500; };
+class Exile_Car_Ural_Open_Worker      { quality = 1; price = 6500; };
+class Exile_Car_Ural_Open_Yellow      { quality = 1; price = 6500; };
+class Exile_Car_Ural_Open_Blue      { quality = 1; price = 6500; };
 
 	///////////////////////////////////////////////////////////////////////////////
 	// Flags
@@ -4201,6 +4232,21 @@ class ExileAbstractAction
  */
 class CfgInteractionMenus
 {
+	 class Bounties
+ {
+     targetType = 2;
+     target = "Exile_Trader_Office";
+
+     class Actions
+     {
+         class MostWanted: ExileAbstractAction
+         {
+             title = "Most Wanted";
+             condition = "true";
+             action = "createDialog 'MostWantedDialog';";
+         };
+     };
+ };	
 	class Car 
 	{
 		targetType = 2;
@@ -4708,6 +4754,13 @@ class CfgInteractionMenus
 
 		class Actions 
 		{
+			// Ducks of war mod
+         /*  class Trophy: ExileAbstractAction
+            {
+                title = "Claim Trophy";
+                condition = "!(alive ExileClientInteractionObject)";
+                action = "_this call DOW_FN_ClaimTrophy";
+            };*/
 			class Free: ExileAbstractAction
 			{
 				title = "Free";
@@ -5246,6 +5299,7 @@ class CfgTraderCategories
 "sfp_m90w_uniform_folded",
 "sfp_m59w_uniform",
 "sfp_m90d_uniform_folded",
+"sfp_m87_flying_suit",
 "U_C_Poloshirt_blue",
 "U_C_Poloshirt_burgundy",
 "U_C_Poloshirt_salmon",
@@ -5576,12 +5630,9 @@ class CfgTraderCategories
 "H_HeadSet_orange_F",
 "H_HeadSet_red_F",
 "H_HeadSet_black_F",
-"H_PASGT_basic_blue_press_F",
-"H_PASGT_basic_blue_F",
 "H_PASGT_basic_white_F",
 "H_PASGT_basic_olive_F",
 "H_PASGT_basic_black_F",
-"H_PASGT_neckprot_blue_press_F",
 "H_HeadBandage_stained_F",
 "H_HeadBandage_clean_F",
 "H_HeadBandage_bloody_F",
@@ -5635,7 +5686,6 @@ class CfgTraderCategories
 "H_Cap_blk_Raven",
 "H_Cap_blk_ION",
 "H_Cap_oli_hs",
-"H_Cap_press",
 "H_Cap_usblack",
 "H_Cap_surfer",
 "H_Cap_police",
@@ -5748,7 +5798,8 @@ class CfgTraderCategories
 "sfp_m59w_cap",
 "sfp_m90w_cap",
 "sfp_bashatt90",
-"sfp_m90w_helmet_peltor_nvg"
+"sfp_m90w_helmet_peltor_nvg",
+"sfp_flighthelmet116"
 		};
 	};
 	
@@ -6102,7 +6153,9 @@ class CfgTraderCategories
 "rhsusf_acc_rotex_mp7",
 "rhsusf_acc_rotex_mp7_desert",
 "rhsusf_acc_rotex_mp7_winter",
-"rhsusf_acc_rotex_mp7_aor1"
+"rhsusf_acc_rotex_mp7_aor1",
+"VME_M99_Suppressor_Fix",
+"rhsusf_acc_T1_high"
 		};
 	};
 
@@ -6210,7 +6263,8 @@ class CfgTraderCategories
 "rhsusf_acc_eotech_552",
 "rhsusf_acc_premier",
 "rhsusf_acc_premier_anpvs27",
-"rhsusf_acc_premier_low"
+"rhsusf_acc_premier_low",
+"RHS_optic_maaws"
 		};
 	};
 
@@ -6252,8 +6306,7 @@ class CfgTraderCategories
 "Exile_Item_Sand",
 "Exile_Item_ZipTie",
 "Exile_Item_SleepingMat",
-"Exile_Item_ToiletPaper",
- "Exile_Item_Knife"
+"Exile_Item_ToiletPaper"
 
 			/*
 			--Not for Sale--
@@ -6395,6 +6448,7 @@ class CfgTraderCategories
 "Exile_Item_BaseCameraKit",
 "Exile_Item_ThermalScannerPro",
 "Exile_Item_SafeKit",
+"Exile_Container_Safe_Small",
 "Exile_Item_CodeLock",
 "Exile_Item_FortificationUpgrade",
 "Exile_Item_Knife",
@@ -6443,8 +6497,7 @@ class CfgTraderCategories
 			"Exile_Item_Magazine01",
 			"Exile_Item_Magazine02",
 			"Exile_Item_Magazine03",
-			"Exile_Item_Magazine04",
-			"Exile_Item_RubberDuck"
+			"Exile_Item_Magazine04"
 
 			// Not available in 0.9.4!
 			//"Exile_Item_Defibrillator"
@@ -6682,8 +6735,8 @@ class CfgTraderCategories
 "rhsusf_mag_7x45acp_MHP",
 "rhs_mag_9x18_12_57N181S",
 "rhs_mag_9x19_17",
-"sfp_100rd_762x51_ksp58",
-"sfp_249rd_762x51_ksp58",
+"sfp_100Rnd_762x51_ksp58",
+"sfp_249Rnd_762x51_ksp58",
 "sfp_200rd_556x45_ksp90",
 "sfp_9rnd_762x51_psg90",
 "sfp_9rnd_762x51_psg90_prick",
@@ -6760,7 +6813,8 @@ class CfgTraderCategories
 "rhsusf_5Rnd_00Buck",
 "rhsusf_5Rnd_Slug",
 "rhsgref_5Rnd_762x54_m38",
-"rhs_mag_9x19mm_7n21_20"
+"rhs_mag_9x19mm_7n21_20",
+"M99_5Rnd_mag"
 		};
 	};
 
@@ -6895,8 +6949,10 @@ class CfgTraderCategories
 "sfp_rbs56_weapon_bag",
 "sfp_rbs70_support_bag",
 "sfp_rbs70_weapon_bag",
-"sfp_grkm41_support_bag",
-"sfp_grkm41_weapon_bag"
+"sfp_grkm84_support_bag",
+"sfp_grkm84_weapon_bag",
+"rhs_weap_fgm148",
+"rhs_fgm148_magazine_AT"
 
 		};
 	};
@@ -7284,7 +7340,8 @@ class CfgTraderCategories
 "rhs_weap_svdp_wd_npz",
 "rhs_weap_svds",
 "rhs_weap_svds_npz",
-"rhs_weap_t5000"
+"rhs_weap_t5000",
+"VME_M99_Fix"
 		};
 	};
 
@@ -7562,7 +7619,9 @@ class CfgTraderCategories
 "rhs_bmp3m_msv",
 "rhs_bmp3mera_msv",
 "rhs_Ob_681_2",
-"rhs_sprut_vdv"
+"rhs_sprut_vdv",
+"VME_PLA_ZBL09",
+"VME_PLA_ZTL11"
 
 		};
 	};
@@ -7574,7 +7633,6 @@ class CfgTraderCategories
 		items[] =
 		{
 "RHS_BM21_MSV_01",
-"rhsusf_m109_usarmy",
 "rhs_2s3_tv",
 "POOK_K300P_OPFOR",
 "POOK_9K58_OPFOR",
@@ -7589,10 +7647,15 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] =
 		{
+			
+			"VME_PLA_hq7",
+			"VME_PLA_HQ61",
+			"VME_PLA_HQ64",
 			"RHS_Ural_Zu23_MSV_01",
 "rhs_gaz66_zu23_msv",
 "rhs_zsu234_aa",
-"RHS_M6_wd"
+"RHS_M6_wd",
+"VME_PLA_PGZ07"
 		};
 	};
 
@@ -7632,10 +7695,8 @@ class CfgTraderCategories
 		{			
 "Exile_Chopper_Huey_Armed_Green",
 "I_Heli_light_03_F",
-"B_Heli_Attack_01_F",
 "O_Heli_Light_02_F",
 "sfp_hkp9_rb55",
-"sfp_hkp4_asw",
 "RHS_MELB_AH6M_H",
 "RHS_MELB_AH6M_L",
 "RHS_MELB_AH6M_M",
@@ -7649,6 +7710,7 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
 		items[] =
 		{
+"B_Heli_Attack_01_F",
 "RHS_CH_47F",
 "RHS_CH_47F_light",
 "RHS_AH1Z",
@@ -7710,7 +7772,7 @@ class CfgTraderCategories
 			"Exile_Boat_SDV_CSAT",
 			"Exile_Boat_SDV_Digital",
 			"Exile_Boat_SDV_Grey",
-			"Exile_Boat_WaterScooter",
+			//"Exile_Boat_WaterScooter",
 			"Exile_Boat_RHIB"
 		};
 	};
@@ -7733,11 +7795,14 @@ class CfgTraderCategories
 			"HAFM_CB90",
 			"HAFM_GunBoat",
 			"sfp_rbb_norrkoping",
-			"sfp_neptun",
-	"HAFM_Virginia",
-	"HAFM_Yasen",
-	"HAFM_214",
-	"HAFM_209"
+			"vme_ZUBR_PLA"
+			
+			//,
+			//"sfp_neptun",
+	//"HAFM_Virginia",
+	//"HAFM_Yasen",
+	//"HAFM_214",
+	//"HAFM_209"
 		};
 	};
 
@@ -7830,22 +7895,17 @@ class CfgTraderCategories
 		items[] =
 		{
 			"RHS_A10",
-			"RHS_A10_CBU",
-			"RHS_A10_AT",
-			"rhsusf_f22",
-			"FIR_F15C_Standard",
-			"FIR_F15D",
-			"FIR_F15DJ",
-			"FIR_F15E",
-			"FIR_F15K",
-			"FIR_F16C_Standard",
-			"FIR_F16D",
-			"FIR_F14A",
-			"FIR_F14B",
-			"FIR_F14D",
-			"FIR_AV8B_Standard",
-			"JS_JC_FA18E",
-			"JS_JC_FA18F"
+"RHS_A10_CBU",
+"RHS_A10_AT",
+"rhsusf_f22",
+"FIR_F15E_SJ_336",
+"FIR_F15K",
+"FIR_F16C_WW",
+"FIR_F16C",
+"FIR_F16D",
+"JS_JC_FA18E",
+"JS_JC_FA18F"
+//"FIR_AV8B_Standard" <<-ams issue
 		};
 	};
 	
@@ -7864,7 +7924,6 @@ class CfgTraderCategories
 			"rhs_l159_CDF_CAP",
 			"rhs_l159_CDF_CAS",
 			"rhs_l39_cdf",
-			"rhs_mig29s_vmf",
 			"RHS_T50_vvs_052"
 		};
 	};
@@ -9087,7 +9146,7 @@ class CfgVirtualGarage
 };
 class CfgXM8 
 {
-	extraApps[] = {"ExAd_CHVD"};
+	extraApps[] = {""};
 	class settings
 	{
 		controlID = 4070;
@@ -9108,16 +9167,7 @@ class CfgXM8
 		appID = "App03";
 		title = "Sloth Machine";
 	};
-	class ExAd_CHVD
-    {
-        title = "View Distance Settings";
-        controlID = 50200;                  
-        config = "ExadClient\XM8\Apps\CHVD\config.sqf";
-        logo = "ExadClient\XM8\Apps\CHVD\Icon_CHVD.paa";
-        onLoad = "ExAdClient\XM8\Apps\CHVD\onLoad.sqf";
-        onOpen = "ExAdClient\XM8\Apps\CHVD\onOpen.sqf";
-        onClose = "ExAdClient\XM8\Apps\CHVD\onClose.sqf";
-    };
+
 
 
 	
@@ -9169,9 +9219,9 @@ class XM8_App04_Button: RscExileXM8AppButton1x1
 
 class XM8_App05_Button: RscExileXM8AppButton1x1
 {
-    textureNoShortcut = "ExadClient\XM8\Apps\CHVD\Icon_CHVD.paa";
-    text = "View Distance Settings";
-    onButtonClick = "['ExAd_CHVD', 0] call ExileClient_gui_xm8_slide";
+    textureNoShortcut = "";
+    text = "";
+    onButtonClick = "";
     resource = "";
 };
 

@@ -37,7 +37,7 @@ ExileServer_object_container_createContainer = "Exile_Server_Overrides\ExileServ
 ExileServer_object_construction_database_load = "Exile_Server_Overrides\ExileServer_object_construction_database_load.sqf";
 ExileServer_object_construction_database_insert = "Exile_Server_Overrides\ExileServer_object_construction_database_insert.sqf";
 ExileServer_object_vehicle_network_retrieveVehicleRequest = "Exile_Server_Overrides\ExileServer_object_vehicle_network_retrieveVehicleRequest.sqf";
-	//ExAd XM8
-    ExileClient_gui_xm8_slide                       = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
-    ExileClient_gui_xm8_show                        = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
+//////wanted
+ ExileClient_gui_xm8_showPartySlides = "MostWanted_Client\overwrites\ExileClient_gui_xm8_showPartySlides.sqf";
+ ExileServer_system_network_event_onPlayerConnected = "MostWanted_Client\overwrites\ExileServer_system_network_event_onPlayerConnected.sqf";
     
