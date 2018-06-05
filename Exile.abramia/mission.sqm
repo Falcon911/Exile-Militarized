@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=1112;
+		nextID=1114;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={9872.874,100.38877,10102.206};
-		dir[]={0.49455982,-0.67234576,-0.55080038};
-		up[]={0.44919536,0.74023217,-0.50027579};
-		aside[]={-0.74407822,-3.5438279e-007,-0.66810519};
+		pos[]={889.1759,433.84711,6114.9795};
+		dir[]={0.14151682,-0.88344812,-0.44667295};
+		up[]={0.2668258,0.46853089,-0.84218866};
+		aside[]={-0.9533084,-9.4203278e-007,-0.30203331};
 	};
 };
 binarizationWanted=0;
@@ -34,7 +34,7 @@ addons[]=
 	"A3_Structures_F_Mil_Helipads",
 	"A3_Structures_F_Ind_AirPort",
 	"A3_Boat_F_Jets_Carrier_01",
-	"sfp_gruppbat"
+	"HAFM_Submarines_Men"
 };
 class AddonsMetaData
 {
@@ -102,8 +102,8 @@ class AddonsMetaData
 		};
 		class Item9
 		{
-			className="sfp_gruppbat";
-			name="sfp_gruppbat";
+			className="HAFM_Submarines_Men";
+			name="HAFM_Submarines_Men";
 		};
 	};
 };
@@ -211,7 +211,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=136;
+		items=134;
 		class Item0
 		{
 			dataType="Group";
@@ -7800,7 +7800,7 @@ class Mission
 		class Item92
 		{
 			dataType="Trigger";
-			position[]={7271.4194,17.32,472.16901};
+			position[]={7271.4189,17.32,472.16901};
 			class Attributes
 			{
 				condition="call{call{{_x iskindof ""plane"" && speed _x < 1} count thislist > 0  }}";
@@ -7858,8 +7858,8 @@ class Mission
 		class Item95
 		{
 			dataType="Trigger";
-			position[]={958.21973,86.936523,6025.7539};
-			angle=1.4212385;
+			position[]={958.21997,86.936989,6025.7539};
+			angle=1.4212389;
 			class Attributes
 			{
 				condition="call{call{{_x iskindof ""plane"" && speed _x < 1} count thislist > 0  }}";
@@ -7874,15 +7874,14 @@ class Mission
 			};
 			id=1036;
 			type="EmptyDetector";
-			atlOffset=-0.00046539307;
 		};
 		class Item96
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={838.96625,88.327927,6030.5527};
-				angles[]={0.14105691,0,5.9862318};
+				position[]={965.11682,86.939537,5959.2256};
+				angles[]={-0,0,6.2791886};
 			};
 			side="Empty";
 			flags=4;
@@ -7891,12 +7890,11 @@ class Mission
 			};
 			id=1037;
 			type="Land_HelipadCivil_F";
-			atlOffset=0.0001373291;
 		};
 		class Item97
 		{
 			dataType="Trigger";
-			position[]={839.08197,88.44783,6029.4941};
+			position[]={965.41431,86.938339,5958.8862};
 			class Attributes
 			{
 				condition="call{call{{_x iskindof ""helicopter"" && isTouchingGround _x && speed _x < 1} count thislist > 0  }}";
@@ -7910,6 +7908,7 @@ class Mission
 			};
 			id=1038;
 			type="EmptyDetector";
+			atlOffset=-7.6293945e-006;
 		};
 		class Item98
 		{
@@ -7930,7 +7929,7 @@ class Mission
 		class Item99
 		{
 			dataType="Trigger";
-			position[]={9214.4688,54.330002,6344.5034};
+			position[]={9214.3701,54.330002,6345.6709};
 			class Attributes
 			{
 				condition="call{call{{_x iskindof ""helicopter"" && isTouchingGround _x && speed _x < 1} count thislist > 0  }}";
@@ -8936,7 +8935,7 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={377.58899,-24.34,879.60498};
-			angle=4.7177968;
+			angle=4.7177987;
 			class Attributes
 			{
 				condition="call{{(_x iskindof ""ship"" || _x iskindof ""HAFM_Submarines"" || _x iskindof ""HAFM_NAVY"" || _x iskindof ""sfp_vehclass_ship"") && speed _x < 1} count thislist > 0}";
@@ -9069,7 +9068,7 @@ class Mission
 		class Item133
 		{
 			dataType="Trigger";
-			position[]={7327.9063,17.32,485.92184};
+			position[]={7327.9058,17.32,485.922};
 			class Attributes
 			{
 				condition="call{call{{_x iskindof ""helicopter"" && isTouchingGround _x && speed _x < 1} count thislist > 0  }}";
@@ -9084,37 +9083,6 @@ class Mission
 			id=1080;
 			type="EmptyDetector";
 		};
-		class Item134
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={437.80554,2.0809226,992.67493};
-			};
-			side="Empty";
-			class Attributes
-			{
-			};
-			id=1088;
-			type="sfp_gruppbat_un";
-			atlOffset=57.709381;
-		};
-		class Item135
-		{
-			dataType="Marker";
-			position[]={1302.35,8648.52};
-			name="ExileMarker99";
-			text="No build";
-			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
-			colorName="ColorBlack";
-			alpha=0;
-			fillName="Border";
-			a=150;
-			b=150;
-			drawBorder=1;
-			id=1089
-			atlOffset=3.0753284;
-		};
+		
 	};
 };

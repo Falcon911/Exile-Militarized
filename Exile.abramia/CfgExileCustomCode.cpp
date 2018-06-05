@@ -40,4 +40,17 @@ ExileServer_object_vehicle_network_retrieveVehicleRequest = "Exile_Server_Overri
 //////wanted
  ExileClient_gui_xm8_showPartySlides = "MostWanted_Client\overwrites\ExileClient_gui_xm8_showPartySlides.sqf";
  ExileServer_system_network_event_onPlayerConnected = "MostWanted_Client\overwrites\ExileServer_system_network_event_onPlayerConnected.sqf";
+ /////SM
+ 	ExileClient_gui_traderDialog_show = "SM\TraderPlus\overrides\ExileClient_gui_traderDialog_show.sqf";
+	ExileClient_gui_traderDialog_updateItemStats = "SM\TraderPlus\overrides\ExileClient_gui_traderDialog_updateItemStats.sqf";
+	ExileClient_gui_vehicleTraderDialog_show = "SM\TraderPlus\overrides\ExileClient_gui_vehicleTraderDialog_show.sqf";
+	ExileClient_gui_traderDialog_event_onStoreDropDownSelectionChanged = "SM\TraderPlus\overrides\ExileClient_gui_traderDialog_event_onStoreDropDownSelectionChanged.sqf";
+	ExileClient_gui_vehicleTraderDialog_updateVehicleListBox = "SM\TraderPlus\overrides\ExileClient_gui_vehicleTraderDialog_updateVehicleListBox.sqf";
+	ExileClient_gui_traderDialog_updateStoreListBox = "SM\TraderPlus\overrides\ExileClient_gui_traderDialog_updateStoreListBox.sqf";
+	ExileClient_gui_traderDialog_event_onStoreListBoxSelectionChanged = "SM\TraderPlus\overrides\ExileClient_gui_traderDialog_event_onStoreListBoxSelectionChanged.sqf";
+	ExileClient_gui_traderDialog_event_onPurchaseButtonClick = "SM\TraderPlus\overrides\ExileClient_gui_traderDialog_event_onPurchaseButtonClick.sqf";
+	ExileClient_gui_traderDialog_event_onUnload = "SM\TraderPlus\overrides\ExileClient_gui_traderDialog_event_onUnload.sqf";
+	ExileClient_gui_traderDialog_event_onFilterCheckboxStateChanged = "SM\TraderPlus\overrides\ExileClient_gui_traderDialog_event_onFilterCheckboxStateChanged.sqf";
+	ExileClient_system_trading_network_purchaseItemResponse = "SM\TraderPlus\overrides\ExileClient_system_trading_network_purchaseItemResponse.sqf";
+	ExileClient_gui_traderDialog_updateInventoryListBox = "SM\TraderPlus\overrides\ExileClient_gui_traderDialog_updateInventoryListBox.sqf";
     

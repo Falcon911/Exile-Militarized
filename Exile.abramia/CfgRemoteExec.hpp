@@ -4,6 +4,8 @@ class CfgRemoteExec
 	{
 		mode = 1;
 		jip = 0;
+		class fnc_AdminReq { allowedTargets=2; };	// infiSTAR AntiHack
+		class fn_xm8apps_server { allowedTargets=2; };	// infiSTAR xm8apps
 		class ExileServer_system_network_dispatchIncomingMessage { allowedTargets=2; };	// ExileMod
 		class achilles_fnc_changeside_local;
 		class achilles_fnc_spawn_remote;
@@ -62,6 +64,7 @@ class CfgRemoteExec
         class AVS_fnc_refuelPayment                                 { allowedTargets=2; };
         class AVS_fnc_refuelVehicle									{ allowedTargets=2; };
 		class AVS_fnc_fillCanister									{ allowedTargets=2; };
+		class ExileServer_lottery_network_request { allowedTargets = 2; }
 
 	};
 	class Commands

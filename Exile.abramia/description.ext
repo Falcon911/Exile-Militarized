@@ -5,7 +5,7 @@
 #include "R3F_LOG\desc_include.h"
 #include "MostWanted_Client\Dialog\MostWantedDefines.hpp"
 #include "MostWanted_Client\Dialog\MostWantedDialog.hpp"
-
+#include "SM\TraderPlus\SM_TraderPlus.hpp"
 
 ///////////////////////////////////////////////////////////////////////////////
 // Server Settings - Modify at will
