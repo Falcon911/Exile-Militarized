@@ -47,24 +47,7 @@ else
 		};
 	};
 };
-// Most-Wanted
-private ["_bounty","_lock","_interval","_type","_immunity"];
-_interval = getNumber(missionConfigFile >> "CfgMostWanted" >> "Database" >> "Immunity" >> "interval");
-_immunity = format ["hasImmunity:%1:%2",(getPlayerUID _requestingPlayer),_interval] call ExileServer_system_database_query_selectSingleField;
-_bambiPlayer setVariable ["ExileBountyImmunity", _immunity, true];
 
-_bounty = format ["getBounty:%1",(getPlayerUID _requestingPlayer)] call ExileServer_system_database_query_selectSingle;
-_bambiPlayer setVariable ["ExileBounty",_bounty select 0];
-_lock = false;
-if ((_bounty select 1) isEqualTo 1) then
-{
-	_lock = true;
-};
-_bambiPlayer setVariable ["ExileBountyLock",_lock,true];
-_bambiPlayer setVariable ["ExileBountyContract",_bounty select 2,true];
-_bambiPlayer setVariable ["ExileBountyCompletedContracts",_bounty select 3];
-_bambiPlayer setVariable ["ExileBountyFriends",_bounty select 4,true];
-// Most-Wanted
 _name = name _requestingPlayer;
 _clanID = (_accountData select 3);
 if !((typeName _clanID) isEqualTo "SCALAR") then
@@ -166,6 +149,54 @@ if (getNumber(missionConfigFile >> "CfgSimulation" >> "enableDynamicSimulation")
 	  	_bambiPlayer enableDynamicSimulation true;
 	};
 };
+// Custom Loadout Starts Here. Uncomment the lines you want your players to have..
+
+	// Remove Anything already on the BambiSettings
+	removeAllAssignedItems _bambiPlayer;
+	removeGoggles _bambiPlayer;
+	removeHeadgear _bambiPlayer;
+	removeUniform _bambiPlayer;
+	removeBackpackGlobal _bambiPlayer; // Only Uncomment This if Not Using Paracutes
+	
+	// Clothing
+	_bambiPlayer forceAddUniform "Exile_Uniform_BambiOverall"; // Black Exile Overalls
+	_bambiPlayer addVest "V_HarnessO_brn"; // Change Vest Class Here
+	//_bambiPlayer addHeadgear "H_Beret_gen_F"; // Change Headgear Class Here
+	//_bambiPlayer addBackpack "B_ViperHarness_blk_F"; // Change Backpack Class Here
+	
+	// Navigation Items
+	//_bambiPlayer linkItem "ItemGPS"; // This Puts The GPS Into The Correct Slot
+	_bambiPlayer linkItem "Exile_Item_XM8"; // This Puts The XM8 Into The Correct Slot 
+	//_bambiPlayer linkItem "ItemCompass"; //This Puts The Compass Into The Correct Slot
+	_bambiPlayer linkItem "ItemMap"; //This Puts The Map Into The Correct Slot
+	_bambiPlayer linkItem "ItemRadio"; //This Puts The Radio Into The Correct Slot
+	
+	// Food and Drink Items
+	_bambiPlayer addItem "Exile_Item_PlasticBottleFreshWater"; // Change Drink Class Here
+	_bambiPlayer addItem "Exile_Item_Cheathas"; // Change Food Class Here
+	
+	// Medical Items
+	_bambiPlayer addItem "Exile_Item_Bandage"; // Change Meds Class Here
+	//_bambiPlayer addItem "ACE_EarPlugs"; // Change Meds Class Here
+	//_bambiPlayer addItem "Exile_Item_InstaDoc"; // Change Meds Class Here
+	
+	// Ammo - Add ammo before weapons
+	_bambiPlayer addItemToVest "30Rnd_9x21_Mag"; // Ammo For Weapon Listed Below
+	_bambiPlayer addItemToVest "ACE_EarPlugs"; // Ammo For Weapon Listed Below
+	//_bambiPlayer addItemToVest "11Rnd_45ACP_Mag"; // Ammo For Weapon Listed Below
+	
+	// Weapons
+	_bambiPlayer addWeapon "hgun_P07_F"; // Weapon
+	
+	// Weapons Attachments
+	//_bambiPlayer addHandgunItem "optic_MRD"; // Adds Attachment to Handgun | Change Attachment Class Here
+	//_bambiPlayer addHandgunItem "muzzle_snds_acp"; // Adds Attachment to Handgun | Change Attachment Class Here
+	//_bambiPlayer addPrimaryWeaponItem "optic_AMS_khk"; // Adds Attachment to Primary Weapon | Change Attachment Class Here
+	//_bambiPlayer addPrimaryWeaponItem "bipod_03_F_oli";// Adds Attachment to Primary Weapon | Change Attachment Class Here
+	//_bambiPlayer addPrimaryWeaponItem "muzzle_snds_B_khk_F"; // Adds Attachment to Primary Weapon | Change Attachment Class Here
+	
+// Custom Loadout Ends Here. Uncomment the lines you want your players to have..
+
 _bambiPlayer addMPEventHandler ["MPKilled", {_this call ExileServer_object_player_event_onMpKilled}];
 if !(_escapeEnabled) then 
 {

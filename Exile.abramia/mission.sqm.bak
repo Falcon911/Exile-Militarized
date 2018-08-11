@@ -12341,7 +12341,7 @@ class Mission
 			name="ContaminatedZone";
 			text="Altair Radiation";
 			markerType="ELLIPSE";
-			type="ExileNonConstructionZone";
+			type="ExileContaminatedZone";
 			colorName="ColorRed";
 			fillName="SolidBorder";
 			a=250;
@@ -13644,7 +13644,7 @@ class Mission
 			{
 			};
 			id=1448;
-			type="Land_CratesShabby_F";
+			type="Exile_Sign_Vehicles";
 			atlOffset=-0.018339872;
 		};
 		class Item89
@@ -15065,10 +15065,8 @@ class Mission
 			name="marker_66";
 			text="No Build";
 			markerType="ELLIPSE";
-			type="ExileContaminatedZone";
-			colorName="ColorRed";
-			fillName="SolidBorder";
-			alpha=80;
+			type="ExileNonConstructionZone";
+			alpha=0;
 			a=300;
 			b=300;
 			id=1585;

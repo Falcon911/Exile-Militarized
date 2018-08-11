@@ -334,6 +334,7 @@ R3F_LOG_CFG_can_be_lifted = R3F_LOG_CFG_can_be_lifted +
 [
 	"CargoNet_01_box_F",
 	"Box_NATO_AmmoVeh_F",
+	"Box_NATO_Ammo_F",
 	"Exile_Container_SupplyBox",
 	"B_supplyCrate_F",
 	"I_CargoNET_01_F",
@@ -593,6 +594,7 @@ R3F_LOG_CFG_can_be_transported_cargo = R3F_LOG_CFG_can_be_transported_cargo +
 	// Here Comes the Stuff what you want to load in the Vehicle  example: ["IG_supplyCrate_F", 40]
 	["CargoNet_01_box_F", 100],
 	["Box_NATO_AmmoVeh_F",100],
+	["Box_NATO_Ammo_F",100],
 	["Exile_Container_SupplyBox", 200],
 	["B_supplyCrate_F", 100],
 	["I_CargoNET_01_F", 100],
@@ -631,6 +633,7 @@ R3F_LOG_CFG_can_be_moved_by_player = R3F_LOG_CFG_can_be_moved_by_player +
 	// e.g. : "MyMovableObjectClassName1", "MyMovableObjectClassName2"
 	"CargoNet_01_box_F",
 	"Box_NATO_AmmoVeh_F",
+	"Box_NATO_Ammo_F",
 	"Exile_Container_SupplyBox",
 	"B_supplyCrate_F",
 	"I_CargoNET_01_F",

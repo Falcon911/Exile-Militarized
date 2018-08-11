@@ -378,6 +378,7 @@ if (isnil "IL_Variables") then
 		"IG_supplyCrate_F",
 		"O_supplyCrate_F",
 		"I_supplyCrate_F",
+		"Box_NATO_Ammo_F",
 		"C_supplyCrate_F",
 		"Exile_Container_SupplyBox"
 	];

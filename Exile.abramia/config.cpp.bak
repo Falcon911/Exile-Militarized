@@ -3637,7 +3637,7 @@ class rhsgref_BRDM2_HQ      { quality = 2; price = 25120; };
 class rhs_btr60_msv      { quality = 2; price = 43100; };
 class RHS_BTR70_MSV      { quality = 2; price = 48100; };
 class rhs_btr80_msv      { quality = 2; price = 53100; };
-class rhs_btr80a_msv      { quality = 2; price = 55100; };
+class rhs_btr80a_msv      { quality = 2; price = 53100; };
 class rhs_bmd1      { quality = 2; price = 76260; };
 class rhs_bmd1k      { quality = 2; price = 76260; };
 class rhs_bmd1p      { quality = 2; price = 76260; };
